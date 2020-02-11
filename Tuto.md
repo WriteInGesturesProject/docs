@@ -30,14 +30,14 @@ To install directly on device : Plug a device with
 Make sure that you authorize the computer to be connected with your device - 
 Click on the android logo on the top right corner of the Godot Editor
 
-## Problem faced
+### Problem faced
 
-### Application crashes on open
+#### Application crashes on open
 * Maybe you didn't import the module correctly. Make sure the path in the project settings is correct.
 * If you install the application on a pretty old device. You have to change the GLES version from 3 to 2. Just click on the top right corner of the editor.
 
-### Could not install to device
+#### Could not install to device
 * If the application is already installed in your device, try to uninstall it.
 * Becareful with your files name. Some special characters aren't well supported in the manisfest.xml of Android. For example the file **[a].png** will cause problem when exported to android
 
-### Anyway you can run `adb logcat` to see the logcat on the terminal and try to debug your app
+#### Anyway you can run `adb logcat` to see the logcat on the terminal and try to debug your app
