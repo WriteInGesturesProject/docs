@@ -39,4 +39,4 @@ Click on the android logo on the top right corner of the Godot Editor
 * If the application is already installed in your device, try to uninstall it.
 * Becareful with your files name. Some special characters aren't well supported in the manisfest.xml of Android. For example the file **[a].png** will cause problem when exported to android
 
-### Anyway you can run `adb logcat` to see the logcat on the terminal
+### Anyway you can run `adb logcat` to see the logcat on the terminal and try to debug your app
