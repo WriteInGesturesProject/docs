@@ -15,11 +15,15 @@
 * www.catedu.es/arasaac
 * www.do2learn.com/picturecards/printcards/index.htm
 
+## Paying
+* http://ledictionnairevisuel.demarque.com (30d free then paying)
+
 ## Unavailable (Website unavailable or wrong platform)
 * http://www.ikonet.com/fr/visuelmobile (Only available on iOS)
 * https://www.triangle.org.uk/howitis
 * http://epn.agglo-montbeliard.fr/index.php?option=com_content&view=category&layout=blog&id=56&Itemid=213 (Unavailable)
 * http://pixel.fhda.edu/~heidi/language/library.html (Infinite load)
 
-## Paying
-* http://ledictionnairevisuel.demarque.com (30d free then paying)
+# Analysis
+
+The goal of Artigest is to be a light, free and open-source application. We don't want to download a bank of image and then search for an image that fit with the world. We want the speech therapist to insert a word and then artigest suggest some pictures to use. So we want a website that allows us to search for a word and use the image.
