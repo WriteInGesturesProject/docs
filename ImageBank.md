@@ -26,4 +26,4 @@
 
 # Analysis
 
-The goal of Artigest is to be a light, free and open-source application. We don't want to download a bank of image and then search for an image that fit with the world. We want the speech therapist to insert a word and then artigest suggest some pictures to use. So we want a website that allows us to search for a word and use the image.
+The goal of Artigest is to be a light, free and open-source application. We don't want to download a bank of image and then search for an image that fit with the word. We want the speech therapist to insert a word and then artigest suggest some pictures to use. So we want a website that allows us to search for a word and use the image.
