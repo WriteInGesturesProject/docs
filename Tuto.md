@@ -17,7 +17,9 @@
 (More info [here](https://docs.godotengine.org/en/latest/tutorials/plugins/android/android_plugin.html))
 * Create a [debug.keystore](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores)
 * Configure your editor settings : Editor - Editor settings - Android  
-You have to enter the path of Adb, Jarsigner, Debug Keystore and the Custom Build SDK Path.
+You have to enter the path of Adb, Jarsigner, Debug Keystore and the Custom Build SDK Path.  
+ADB is in your SDK folder (Example: ~/Android/sdk/platform-tools/)  
+Jarsigner is in your JDK folder (Example: $JAVA_HOME/bin)
 * Configure the project settings : Project - Project settings - Android - Insert in the module section the full path of your module.  
 Example : The module in the **org.godotengine.godot** package named **TestModule** correspond to this following path : **org/godotengine/godot/TestModule**  
 If you want to insert more than one module you can insert multiple path separed by a comma. Example : **org/godotengine/godot/TestModule,org/godotengine/godot/RunModule**
