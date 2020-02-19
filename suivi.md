@@ -12,4 +12,22 @@ Jeudi 6 février : Envoi de mail à Estelle Gillet Perret pour avoir des précis
 
 Vendredi 7 février : Fix de bugs sur les différentes pages. Ajout de certaines fonctionnalités sur ces dernières. Enregistrement pour confirmation ou pas de la réussite. Mise en place du principe de score. Création d'algorithme pour créer suite d'image Borel correspondant au mot. 
 
+Lundi 10 février : Rencontre avec Olivier RICHARD. Début de réflexion sur comment sauvegarder les données, et faire des statistiques.
 
+Mardi 11 février : Documentation sur comment lancer le projet sur android. Recherche des différences entre base de données et fichier json pour sauvegarde sur godot. Travail sur une amélioration de l'interface.
+
+Mercredi 12 février : Réunion avec Estelle GILLET PERRET. Adaptation des issues et taches à réaliser en fonction du compte rendu de la réunion.
+
+Jeudi 13 février : Début de travail sur un jeu de l'oie. Début de recherche sur comment télécharger une nouvelle image pour un nouveau mot dans le dictionnaire. Début de création des fichiers json.
+
+Vendredi 14 février : Suite des choses commencer jeudi 13.
+
+Lundi 17 février : Fichiers json créer. Mise en commun des différentes taches réalisées. Adpatation de l'ancien code avec l'utilisation des fichiers json.
+
+Mardi 18 février : Début de travail sur le mode de jeu écoute et choisit. Réussite du chargement de l'image. Ajout de la possibilté d'ajouter un nouveau mot au dictionnaire avec ses différentes caractéristiques. 
+
+Mercredi 19 février : Fin du jeu ecoute et choisit. Début de travail sur les statistiques destiné aux orthophonistes. Mise à jour des scores dans les fichiers json. Ajustement de la structure des fichiers json en fonction des besoins. Début de la création d'un nouvel exercice en fonction des mots choisis par l'orthophoniste pour l'enfant.
+
+Jeudi 20 février : 
+
+Vendredi 21 février :
