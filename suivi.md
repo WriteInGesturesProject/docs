@@ -22,12 +22,38 @@
 
 *Vendredi 14 février :* Suite des choses commencer jeudi 13.
 
-*Lundi 17 février :* Fichiers json créer. Mise en commun des différentes taches réalisées. Adpatation de l'ancien code avec l'utilisation des fichiers json.
+*Lundi 17 février :* Fichiers json créés. Mise en commun des différentes taches réalisées. Adpatation de l'ancien code avec l'utilisation des fichiers json.
 
 *Mardi 18 février :* Début de travail sur le mode de jeu écoute et choisit. Réussite du chargement de l'image. Ajout de la possibilté d'ajouter un nouveau mot au dictionnaire avec ses différentes caractéristiques. 
 
 *Mercredi 19 février :* Fin du jeu ecoute et choisit. Début de travail sur les statistiques destiné aux orthophonistes. Mise à jour des scores dans les fichiers json. Ajustement de la structure des fichiers json en fonction des besoins. Début de la création d'un nouvel exercice en fonction des mots choisis par l'orthophoniste pour l'enfant.
 
-*Jeudi 20 février :*
+*Jeudi 20 février :* Ajout de la possibilité d'ajouter l'image correspondante lors de l'ajout d'un mot. 
 
-*Vendredi 21 février :*
+*Vendredi 21 février :* 
+
+*Semaine du 24 au 28 février :* Vacances
+
+*Lundi  2 mars :* Préparation de la soutenance de mi-parcours. 
+
+*Mardi 3 mars :* Soutenance de mi-parcours
+
+*Mercredi 4 mars :* Modification des différentes scènes de manière plus responsive. Fix de bugs.
+
+*Jeudi 5 mars :* Idem que 4 mars 
+
+*Vendredi 6 mars :* Idem que 4 mars
+
+*Lundi 9 mars :* Ajout des vidéos pour la page d'aide, et fix de bugs.
+
+*Mardi 10 mars :* Création des icônes de notre application pour une interface plus jolie et libre de droit.
+
+*Mercredi 11 mars :* Début d'ajout des images correspodant aux mots du dictionnaire. 
+
+*Jeudi 12 mars :* Début de réalisation du 3ème jeu : le mémory. Modification interface listen and choose pour être plus responsive.
+
+*Vendredi 13 mars :* Fin des choses réalisés jeudi.
+
+*Lundi 16 mars :*
+
+
