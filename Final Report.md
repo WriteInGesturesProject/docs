@@ -10,8 +10,8 @@ Ce genre d'application existe déjà, malheureusement toutes les alternatives à
 Notre application est une application mobile developpé avec le moteur de jeu [Godot Game Engine](https://godotengine.org).
 Nous utilisons des fichiers *JSON* pour le stockage de nos données en local.  
 Voici un exemple d'architecture pour une application Godot
-![](https://github.com/WriteInGesturesProject/docs/blob/master/Architecture.png)  
-Les [noeuds](http://docs.godotengine.org/fr/latest/getting_started/step_by_step/scenes_and_nodes.html#nodes) 
+![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/Architecture.png)  
+Les [scènes](http://docs.godotengine.org/fr/latest/getting_started/step_by_step/scenes_and_nodes.html#nodes) 
 
 ## Réalisations techniques
 Une des fonctionnalité de l'application est de pouvoir L'API Google du [TextToSpeech](https://developer.android.com/reference/android/speech/tts/TextToSpeech) & du [SpeechRecognizer](https://developer.android.com/reference/android/speech/SpeechRecognizer)
