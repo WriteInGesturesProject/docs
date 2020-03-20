@@ -87,9 +87,9 @@ Pour faire en sorte que l'application soit la plus homogène possible nous avons
 
 
 ## Bibliographie
-Logiciels d'images libre de droit : [https://pixabay.com/fr/]
-Utilisation de pictogramme : [https://www.soyvisual.org/?photos=2&sheets=2&materials=2&material_content=All&material_activity=All&material_lang=All&app=2&app_content=All&app_activity=All&app_level=All&search=1&query=adjetivo]
-[https://www.sclera.be/fr/picto/copyright ]
+Logiciels d'images libre de droit :[pixabay](https://pixabay.com/fr/)
+Utilisation de pictogramme : [soyvisual](https://www.soyvisual.org/?photos=2&sheets=2&materials=2&material_content=All&material_activity=All&material_lang=All&app=2&app_content=All&app_activity=All&app_level=All&search=1&query=adjetivo)
+[sclera](https://www.sclera.be/fr/picto/copyright)
 Images Borel dessiner par Estelle Gillet-Perret
 Vidéo gestes Borel réalisées par Estelle Gillet-Perret
 
