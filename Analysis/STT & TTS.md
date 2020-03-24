@@ -20,3 +20,5 @@ But only a few of them are compatible with Godot 3.2
 We found some solutions :  
 * Godot module based on Pocketsphinx : [Godot_STT](https://github.com/SamuraiSigma/speech-to-text)
 * Google Speech Recognizer : [Godot_CustomSpeech](https://github.com/literaldumb/Godot-CustomSpeech)
+
+The problem is that the Godot_STT only support english recognition and we want Artigest to handle a few languages (in the long term).
