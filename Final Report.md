@@ -34,7 +34,7 @@ C'est dans cette partie que l'enfant va pouvoir travailler tout en joueant. Pour
 Dans ce menu nous avons trois jeux à lui proposé :
 - Le jeu de l'oie
 - L'écoute et choisis
-- Le deu du Memory
+- Le jeu du Memory
 
 
 #### Le menu d'entrainement
@@ -51,10 +51,10 @@ Ce menu regroupe tous les sons de la langue française avec en plus une vidéo r
 
 ## Technologies utilisées
 - L'éditeur de scènes [Godot Engine](https://godotengine.org/)
+- Le langage de programmation [GDScript](https://docs.godotengine.org/fr/latest/getting_started/scripting/gdscript/gdscript_basics.html)
 - Versionning et partage de code [Git](https://git-scm.com/) et [GitHub](https://github.com/)
 - Le [SDK Android](https://developer.android.com/studio)
 - Les API Google [TextToSpeech](https://developer.android.com/reference/android/speech/tts/TextToSpeech) et [SpeechRecognizer](https://developer.android.com/reference/android/speech/SpeechRecognizer) inclus dans Android
-- Le langage de programmation [GDScript](https://docs.godotengine.org/fr/latest/getting_started/scripting/gdscript/gdscript_basics.html)
 - Le logiciel de montage photo [PhotoShop](https://www.adobe.com/fr/products/photoshop.html)
 
 
@@ -62,7 +62,7 @@ Ce menu regroupe tous les sons de la langue française avec en plus une vidéo r
 Nous avons appliquer la méthode agile SCRUM, nous avions donc :  
 - Un chef de projet
 - Un SCRUM Master
-- Des developpeurs
+- Des développeurs
 - Des daily meetings
 - Une division de notre emploi du temps en sprint d'environ 2 semaines, soit 3 sprints.
 
@@ -76,8 +76,14 @@ Pour faire en sorte que l'application soit la plus homogène possible nous avons
 ## Métriques logiciels : lignes de code, langages, performance, temps ingénieur (d'après vos journaux), la répartition des lignes de code et des commits en pourcentage entre les membres du projet ...)
 
 
-## Conclusion (Retour d'expérience)
+## Conclusion
+Ce projet à été pour nous quelque chose de très positif sur beaucoup d'aspects.
 
+Ce sujet nous a très fortement interéssé et motivé grâce à de nombreux points.
+Cette application n'est pas juste un projet scolaire, mais bien une demande de quelqu'un d'exterieur souhaitant utilisé ensuite le produit final dans un but d'aide à la personne, ici les enfants.
+De plus cette application est le premier projet sur lequel nous consacrons 100% de notre temps. 
+
+D'autre part ce projet nous a fait en même temps découvrir une nouvelle technologie mais aussi donner notre première expérience dans le monde de l'open-source.
 
 ## Transparent expliquant la démonstration
 
