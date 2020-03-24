@@ -33,8 +33,8 @@ C'est dans cette partie que l'enfant va pouvoir travailler tout en joueant. Pour
 #### Le menu de jeu
 Dans ce menu nous avons trois jeux à lui proposé :
 - Le jeu de l'oie
-- L'écoute et choisi
-- Le Memory
+- L'écoute et choisis
+- Le deu du Memory
 
 
 #### Le menu d'entrainement
@@ -58,7 +58,7 @@ Ce menu regroupe tous les sons de la langue française avec en plus une vidéo r
 - Le logiciel de montage photo [PhotoShop](https://www.adobe.com/fr/products/photoshop.html)
 
 
-## Gestion de projet (méthode, planning prévisionnel et effectif, gestion des risques, rôles des membres ...)
+## Gestion de projet (méthode, planning prévisionnel et effectif, rôles des membres ...)
 Nous avons appliquer la méthode agile SCRUM, nous avions donc :  
 - Un chef de projet
 - Un SCRUM Master
