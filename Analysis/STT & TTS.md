@@ -12,7 +12,7 @@ The purpose of this feature is to give a good base in order to the children to p
 
 By making some tests, we found out that the Google Speech solution was the best one because the pronunciation is overall better that the Godot_TSS one.
 Unfortunately, the Google Speech API is ony available for Android devices. 
-So, we decided to implement the Godot_TTS solution only for the desktop version of the app.
+So, we decided to put the developpement of the desktop version of the app in stand-by.
 
 ## Speech To Text (STT)
 Likewise, multiple software are available to handle this feature.
