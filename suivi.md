@@ -54,6 +54,8 @@
 
 *Vendredi 13 mars :* Fin des choses réalisés jeudi.
 
-*Lundi 16 mars :*
+*Semaine du 16 au 22 mars :* Fix de bugs 
+
+*Semaine du 23 au 28 mars :* Fix des derniers bugs, rédaction des rapports et documents de soutenance. Envoie de la version finale au client.
 
 
