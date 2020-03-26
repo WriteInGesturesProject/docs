@@ -15,7 +15,7 @@
 * First you have to setup a Basic export in order to have the **build** folder for android
 * Then you have to import you module in the build folder of the project 
 (More info [here](https://docs.godotengine.org/en/latest/tutorials/plugins/android/android_plugin.html))
-* Create a [debug.keystore](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores)
+* Create a [debug.keystore](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores) file
 * Configure your editor settings : Editor - Editor settings - Android  
 You have to enter the path of Adb, Jarsigner, Debug Keystore and the Custom Build SDK Path.  
 ADB is in your SDK folder (Example: ~/Android/sdk/platform-tools/)  
