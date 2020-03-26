@@ -1,4 +1,4 @@
-# Rapport Final ArtiGest
+# Rapport Final ArtiPhonie
 
 ## Rappel du sujet/besoin et cahier des charges
 Ce projet porte sur le developpement d'une application mobile pour une utilisation sur tablette à usage des enfants atteints de trouble du langage.
