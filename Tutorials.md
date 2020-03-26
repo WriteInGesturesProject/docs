@@ -24,6 +24,7 @@ Jarsigner is in your JDK folder (Example: $JAVA_HOME/bin)
 Example : The module in the **org.godotengine.godot** package named **TestModule** correspond to this following path : **org/godotengine/godot/TestModule**  
 If you want to insert more than one module you can insert multiple path separed by a comma. Example : **org/godotengine/godot/TestModule,org/godotengine/godot/RunModule**
 * Check the **Use Custom Build** option in the Export option
+* Go into the resources tab and add in the **include field** the folowing string : data/*
 
 ### Export
 To obtain an APK : Project - Export - Android - Export project  
