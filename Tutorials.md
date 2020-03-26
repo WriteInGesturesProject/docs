@@ -11,7 +11,7 @@
 * Project - Install android build template - Download
 * Project - Export - Add - Android
 
-### (Optional) Advanced export setup
+### Advanced export setup
 * First you have to setup a Basic export in order to have the **build** folder for android
 * Then you have to import you module in the build folder of the project 
 (More info [here](https://docs.godotengine.org/en/latest/tutorials/plugins/android/android_plugin.html))
