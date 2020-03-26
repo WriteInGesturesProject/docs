@@ -11,7 +11,7 @@
 * Project - Install android build template - Download
 * Project - Export - Add - Android
 
-### Advanced export (with android modules) setup
+### (Optional) Advanced export setup
 * First you have to setup a Basic export in order to have the **build** folder for android
 * Then you have to import you module in the build folder of the project 
 (More info [here](https://docs.godotengine.org/en/latest/tutorials/plugins/android/android_plugin.html))
@@ -43,6 +43,6 @@ Click on the android logo on the top right corner of the Godot Editor
 
 #### Could not install to device
 * If the application is already installed in your device, try to uninstall it.
-* Becareful with your files name. Some special characters aren't well supported in the manisfest.xml of Android. For example the file **[a].png** will cause problem when exported to android
+* Becareful with your files name. Some special characters aren't well supported in the manisfest.xml of Android. For example the file **[test].png** will cause problem when exported to android
 
 #### Anyway you can run `adb logcat` to see the logcat on the terminal and try to debug your app
