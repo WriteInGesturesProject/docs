@@ -85,14 +85,11 @@ Le tableau suivant recapitule la répartition des lignes de code et des commits 
 Ce projet à été pour nous quelque chose de très positif sur beaucoup d'aspects.
 
 Ce sujet nous a très fortement interéssé et motivé grâce à de nombreux points.
-Cette application n'est pas juste un projet scolaire, mais bien une demande de quelqu'un d'exterieur souhaitant utilisé ensuite le produit final dans un but d'aide à la personne, ici les enfants.
-De plus cette application est le premier projet sur lequel nous consacrons 100% de notre temps. 
+Tout d'abord, cette application n'est pas juste un projet scolaire, mais bien une demande de quelqu'un d'exterieur souhaitant utilisé ensuite le produit final dans un but d'aide à la personne, ici les enfants.
+De plus, cette application est le premier projet sur lequel nous consacrons 100% de notre temps.
+Enfin, cela sera une de nos premières applications déployer et utiliser par toute personne. 
 
 D'autre part ce projet nous a fait en même temps découvrir une nouvelle technologie mais aussi donner notre première expérience dans le monde de l'open-source.
-
-
-## Glossaire
-
 
 ## Bibliographie
 - Banque d'images libre de droit : [Pixabay](https://pixabay.com/fr/)
