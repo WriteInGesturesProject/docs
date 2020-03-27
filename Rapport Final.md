@@ -1,6 +1,6 @@
 # Rapport Final ArtiPhonie
 
-## Rappel du sujet/besoin et cahier des charges
+## Rappel du sujet
 Ce projet porte sur le developpement d'une application mobile pour une utilisation sur tablette à usage des enfants atteints de trouble du langage.
 Il nous a été proposé par une ortophoniste du CHU de Grenoble (Estelle Gillet-Perret).
 Le but de cette application est d'aider les enfants à travailler leur prononciation de manière autonome, à la maison par l'intermédiaire de mini-jeux et de [la méthode Borel-Maisonny](https://fr.wikipedia.org/wiki/M%C3%A9thode_Borel-Maisonny).
@@ -58,7 +58,7 @@ Ce menu regroupe tous les sons de la langue française avec en plus une vidéo r
 - Le logiciel de montage photo [PhotoShop](https://www.adobe.com/fr/products/photoshop.html)
 
 
-## Gestion de projet (méthode, planning prévisionnel et effectif, rôles des membres ...)
+## Gestion de projet
 Nous avons appliquer la méthode agile SCRUM, nous avions donc :  
 - Un chef de projet
 - Un SCRUM Master
@@ -68,16 +68,18 @@ Nous avons appliquer la méthode agile SCRUM, nous avions donc :
 
 Nous avons utilisé les "issues" et "pull request" fournit par GitHub, non seulement pour faire de la revue de code mais surtout pour garder une trace de chaque tâche à effectuer et rapporter les éventuels problème au niveau du developpement de l'application.
 
-## Outils (collaboration, CD/CI ...)
+## Outils
 La collaboration s'est faite par Git et GitHub essentiellement. Nous avons également utilisés des outils de partage tel que Google Drive afin de créer la documentation de manière collaborative.
 Pour faire en sorte que l'application soit la plus homogène possible nous avons nous même créé nos icones. Nous nous sommes inspiré de tuto sur internet et de certains logiciels de montage photo.
 
 
-## Métriques logiciels : lignes de code, langages, performance, temps ingénieur (d'après vos journaux), la répartition des lignes de code et des commits en pourcentage entre les membres du projet ...)
-Nous avons utilisé le logiciel CLOC pour connaitre le nombre de ligne de code de notre projet.
-![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/LOC.png)
+## Métriques logiciels
+Nous avons utilisé le logiciel CLOC pour connaitre le nombre de ligne de code de notre projet.  
+![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/LOC.png)  
 Nous pouvons donc voir que notre projet contient environ 20000 lignes de code et qu'il est majoritairement constitué de fichiers en JSON et en GDScript.
-Au niveau du temps ingénieurs, nous avons calculé environ 35h par semaine de travail par developpeur. Nous obtenons donc un temps ingénieur d'environ 1235h.
+Au niveau du temps ingénieurs, nous avons calculé environ 35h par semaine de travail par developpeur. Nous obtenons donc un temps ingénieur d'environ 1235h.  
+Le tableau suivant recapitule la répartition des lignes de code et des commits entre tous les membres du projet.
+![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/Commits%20repartition.png)
 
 ## Conclusion
 Ce projet à été pour nous quelque chose de très positif sur beaucoup d'aspects.
