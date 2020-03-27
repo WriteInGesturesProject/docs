@@ -74,7 +74,10 @@ Pour faire en sorte que l'application soit la plus homogène possible nous avons
 
 
 ## Métriques logiciels : lignes de code, langages, performance, temps ingénieur (d'après vos journaux), la répartition des lignes de code et des commits en pourcentage entre les membres du projet ...)
-
+Nous avons utilisé le logiciel CLOC pour connaitre le nombre de ligne de code de notre projet.
+![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/LOC.png)
+Nous pouvons donc voir que notre projet contient environ 20000 lignes de code et qu'il est majoritairement constitué de fichiers en JSON et en GDScript.
+Au niveau du temps ingénieurs, nous avons calculé environ 35h par semaine de travail par developpeur. Nous obtenons donc un temps ingénieur d'environ 1235h.
 
 ## Conclusion
 Ce projet à été pour nous quelque chose de très positif sur beaucoup d'aspects.
