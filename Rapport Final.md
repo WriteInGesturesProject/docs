@@ -85,8 +85,6 @@ De plus cette application est le premier projet sur lequel nous consacrons 100% 
 
 D'autre part ce projet nous a fait en même temps découvrir une nouvelle technologie mais aussi donner notre première expérience dans le monde de l'open-source.
 
-## Transparent expliquant la démonstration
-
 
 ## Glossaire
 
