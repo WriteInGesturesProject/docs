@@ -48,7 +48,7 @@ If not click the button Add… and add Android (Runnable).
 
 At this point if you're facing an error about a missing template :
 
-![MissingTemplateIssue](Android_Export_Img/MissingTemplateIssue.jpg)
+![MissingTemplateIssue](Android_Export_Img/MissingTemplateIssue.JPG)
 
 Click on `Manage export template` and install the required template.
 
