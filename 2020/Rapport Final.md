@@ -10,7 +10,7 @@ Ce genre d'application existe déjà, malheureusement toutes les alternatives à
 Notre application est une application mobile developpé avec le moteur de jeu [Godot Game Engine](https://godotengine.org).
 Nous utilisons des fichiers *JSON* pour le stockage de nos données en local.  
 Voici un exemple d'architecture pour une application Godot.  
-![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/Architecture.png)  
+![](https://github.com/WriteInGesturesProject/docs/blob/master/2020/Images/Architecture.png)  
 
 - Les [noeuds](http://docs.godotengine.org/fr/latest/getting_started/step_by_step/scenes_and_nodes.html#nodes) représentent les éléments fondamentaux dans la création de notre jeu. Il est équipé de plusieurs champs modifiable en fonction de son type. Il y a plusieurs type de noeuds : des labels, des boutons, des textures, des lecteurs multimédia etc...  
 - Les [scènes](http://docs.godotengine.org/fr/latest/getting_started/step_by_step/scenes_and_nodes.html#scenes) sont des groupes de noeuds et permettent donc de modéliser un écran de jeu.  
@@ -75,11 +75,11 @@ Pour faire en sorte que l'application soit la plus homogène possible nous avons
 
 ## Métriques logiciels
 Nous avons utilisé le logiciel CLOC pour connaitre le nombre de ligne de code de notre projet.  
-![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/LOC.png)  
+![](https://github.com/WriteInGesturesProject/docs/blob/master/2020/Images/LOC.png)  
 Nous pouvons donc voir que notre projet contient environ 20000 lignes de code et qu'il est majoritairement constitué de fichiers en JSON et en GDScript.
 Au niveau du temps ingénieurs, nous avons calculé environ 35h par semaine de travail par developpeur. Nous obtenons donc un temps ingénieur d'environ 1235h.  
 Le tableau suivant recapitule la répartition des lignes de code et des commits entre tous les membres du projet.
-![](https://github.com/WriteInGesturesProject/docs/blob/master/Images/Commits%20repartition.png)
+![](https://github.com/WriteInGesturesProject/docs/blob/master/2020/Images/Commits%20repartition.png)
 
 ## Conclusion
 Ce projet à été pour nous quelque chose de très positif sur beaucoup d'aspects.
