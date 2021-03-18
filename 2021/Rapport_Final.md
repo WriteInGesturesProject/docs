@@ -195,6 +195,11 @@ Nous avons également travaillé sur un drive partagé pour partager les comptes
 
 # Conclusion
 
+Parmi les différents projets sur lesquels nous avons eu l'occasion de travailler durant notre formation à Polytech Grenoble, le projet Artiphonie à été le plus concret et donc celui qui nous a le plus intéressé et motivé. En effet, ce projet a pour but d'être utilisé par de réells utilisateurs : des enfants et des orthophonistes. Cela nous a amenée à échanger avec une orthophoniste pour comprendre ses besoins et ses attentes, mais aussi à se mettre à tout instant du point de vu de l'utilisateur pour réaliser une appliation accessible et ergonomique.
+
+Étant donnée que le projet sera repris par de futures INFO5 et a pour ambition d'être un projet sur le long terme, nous avons adopté en fin de projet le point d'un nouvel arrivant sur le projet. Nous avons donc réfléchis aux points importants à connaître pour reprendre le projet facilement, aux documents que nous pourrions rédiger pour faciliter cette reprise et nous avons mis du soin dans les commentaires.
+Cette démarche étant particulièrement interessante, car savoir partager ses connaissances lorsqu'on quitte un projet est une compétence qui nous sera très utile en entreprise.
+
 # Bibliographie
 * Documentation [godot](https://docs.godotengine.org/en/stable/)
 * [Lexique](http://www.lexique.org/)
