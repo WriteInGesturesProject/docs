@@ -323,7 +323,192 @@ This file contains the globals variable and functions which can be used everywhe
 
  -------------------------
  -------------------------
+ 
+ # Preuve de concept :
 
+## 1/ Application Godot communiquant avec une BDD par l'intermédiare d'une API
+
+### *Outils et logiciels prerequis :*
+- une **API en Spring** à l'aide d'Eclipse ou Visual Studio Code
+- une **BDD PostgreSql** hebergée en local
+- un gestionnaire de BDD PostgreSQL comme **PG Admin**
+- un outil de requete HTTP comme **PostMan**
+- l'outil de développeur **Godot**
+- une plateforme pour analyser les requetes HTTP comme **Requestbin.net**
+
+### *Objectif :*
+> L'objectif de cette preuve de concept est de développer une application en Godot permettant de communiquer avec une base de donnée. Pour cela, nous allons utiliser une API developpée en Spring permettant d'effectuer des requetes vers la base de donnée qui sera en PostgreSQL. Au final, nous parviendrons à alimenter la base de donnée par l'application Godot et nous pourrons afficher des données sur notre dernière. Les requetes sont des requetes POST et GET par le protocol HTTP.
+
+### *Information :*
+- **PG Admin** permet d'avoir une interface graphique de la BDD
+- **PostMan** nous sert pour envoyer des requetes HTTP¨sans passer par Godot pour effectuer des tests sur l'API et la BDD
+- **Requestbin.net** permettra d'analyser les entetes des requetes HTTP de Godot et leurs contenues
+
+### *Etapes :*
+
+1. Installer les outils et logiciles necessaires
+2. Recuperer le code de l'API developper en Spring sur le Git
+3. Recuperer le code de l'application Godot sur le Git qui effectue le rôle d'un formulaire
+4. Lancer le serveur PostgreSQL puis PG Admin
+5. Lancer l'API à l'aide d'un compilateur JAVA
+6. Effectuer des tests vers l'API à l'aide de PostMan afin de s'assurer que votre API est bien liée à la BDD
+7. Lancer l'application Godot, remplir le formulaire et regarder le résultat dans la console
+
+**/!\ Important**
+* Vérifier que l'API est le champ mot de passe compléter dans ses propriétés pour autoriser l'accès vers la BDD
+* Vérifier que les adresses privées/publiques ou localhost qu'ainsi les ports correspondents sur Godot et l'API
+
+## 2/ Application GODOT avec requetes HTTPS
+
+### *Outils et logiciels prerequis :*
+
+- l'outil de développeur **Godot**
+- un **serveur** hebergeant **un service en HTTPS** (dans notre cas il s'agit de notre API avec la BDD) avec un accès sécurisé à l'aide d'un certificat délivré par une CA
+- **Wireshark** pour anlayser le flux de donnée
+
+### *Objectif :*
+> L'objectif de cette preuve de concept est de parvenir à établir des requêtes HTTPS de l'application Godot vers la BDD par l'intermédiaire de l'API. Pour cela, nous devons renforcer la sécurité de l'application en lui permettant d'effectuer des requêtes HTTPS sans rique d'attaque "Man of the Middle".
+
+### *Etapes :*
+
+1. Installer les outils et logiciles necessaires
+2. Vérifier que le serveur hébergeant le service HTTPS est bien configuré
+3. Lancer le serveur
+4. S'assurer que le certificat de notre dDNS est bien à jour, valide et officiel
+5. Lancer l'application Godot HTTPS recupérée auparavant sur le Git
+6. S'assurer que les requetes HTTPS vers le serveur sont bien sécurisées 
+
+ -------------------------
+ -------------------------
+ 
+ # Serveur Artiphonie
+
+![Logo Polytech](https://www.polytech-grenoble.fr/uas/polytech/LOGO/logo-polytech.png)  
+**Groupe INFO5A 2020/2021 :**  
+*Morgan Crociati*  
+*Claire Velut*  
+*Rémy Ruzafa*  
+*Gaëtan Rival*  
+
+## Informations Actuelles :
+![Logo Ubuntu 18.04](https://www.zupimages.net/up/20/14/gvwb.png)
+![logo Microsoft Azure](https://www.lac.co.jp/service/img/azure_integration_01.png) 
+
+* Hebergeur : VM Azure Microsoft
+* Nom Machine : ArtiphonieServer
+* Système Exploitation : Serveur Ubuntu 18.04
+* Adresse Publique : **51.124.109.83**
+* Port HTTPS : **8443**
+* DNS : **artiphonie.westeurope.cloudapp.azure.com**
+* Taille : Standard B1s
+* Processeur : 1 (Virtuel)
+* RAM : 1 Gio
+* Date de fin du certificat SSL : 13/06/2021
+
+## Mise en place du serveur :  
+
+Dans notre cas, nous avons choisi comme herbergeur *Microsoft Azure* et comme système d'exploitation pour le serveur *Ubuntu version 18.04*
+
+
+
+### Installation Serveur PostgreSQL et configuration :
+1. Installer le serveur à l'aide de la commande suivante :
+
+    `sudo apt install postgresql`
+2. Puis créer une table de donnée avec les commande suivantes :
+
+    `sudo -i -u postgres #Se connecter à la base`  
+    `createdb <NomTable> #Dans notre cas la table se nomme "Projet"`
+    
+3. Optionnel : SI vous devez supprimer la table vous devez tout d'abord vérifier qu'aucune session n'est ouverte, si c'est le cas faite :  
+
+        SELECT pg_terminate_backend(pg_stat_activity.pid)
+        FROM pg_stat_activity  
+        WHERE pg_stat_activity.datname = 'NOM BDD' -- ← Change avec votre BDD  
+        AND pid <> pg_backend_pid();
+    
+    Puis une fois fait, supprimer la base avec la commande ci-jointe :  
+    
+    `dropdb <NomTable>`
+    
+### Installation API et configuration :
+1. Cloner le dépot git sur le serveur :
+  `git clone https://github.com/WriteInGesturesProject/server.git`
+2. Ensuite vérifier les informations dans le fichier **application.properties** en complétant les champs manquants
+3. Assurez vous que votre serveur possède les mêmes ports configurés qu'avec l'API avec aucune restriction dessus (dans notre cas nous avons dû configurer un port 8080 pour les tests HTTP et un port 8443 pour les requetes HTTPS)
+4. Puis éxecuter le script Maven avec la commande :
+  	`./mwvn`
+    
+    **Informations complémentaires :**  
+    Il est possible qu'il vous manque le JDK compatible avec l'application, pour cela nous avons codé l'API sous JAVA 11 donc installer le **JDK 11** sur le serveur à l'aide du lien suivant : https://doc.ubuntu-fr.org/openjdk
+
+### Installation certificat SSL et configuration :
+
+Deux possibilitées :
+- Soit nous créons un certificat auto-signé (Utilisable pour une phase de test)
+- Soit nous créons un certificat délivré par une CA (Obtention d'un certificat officiel)
+
+#### 1. Certificat auto-signé
+1. Générer un certificat SSL dans un keystore  
+    `keytool -genkeypair -alias TOCOMPLETE -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore keystore.p12 -validity 3650 -storepass TOCOMPLETE`  
+    Nous avons choisi le format PKCS12 au lieu de JKS pour une meilleure compatibilité avec l'API en Spring. Java ne peut traiter que des certificats en PKCS12.
+2. Configurer HTTPS dans Spring Boot
+    Dans le fichier 'application.properties' ajouter les lignes suivantes :  
+    
+        server.port=8443
+        server.ssl.key-store-type=PKCS12
+        server.ssl.key-store=classpath:keystore.p12
+        server.ssl.key-store-password=TOCOMPLETE
+        server.ssl.key-alias=TOCOMPLETE
+        security.require-ssl=true
+  
+3. Distribuer le certificats SSL aux clients  
+    Transformer notre clé PKCS12 en certificat CRT :  
+    `keytool -export -keystore keystore.jks -alias TOCOMPLETE -file myCertificate.crt`
+    
+    Installer le certificat obtenu sur notre machine client
+
+4. S'assurer que l'accès au site est bien en HTTPS
+
+#### 2. Certificat distribué par une CA
+1. Utiliser la CA **Let's Encrypt** afin d'obtenir notre certificat officialisé 
+    *Lien utile : https://letsencrypt.org/fr/*
+2. Convertir notre jeu de clé obtenu en certificat PCKS12  
+`openssl pkcs12 -export -out Cert.p12 -in TOCOMPLETE -inkey TOCOMPLETE -passin pass:TOCOMPLETE -passout pass:TOCOMPLETE`
+3. Configurer HTTPS dans Spring Boot
+    Dans le fichier 'application.properties' ajouter les lignes suivantes :  
+    
+        server.port=8443
+        server.ssl.key-store-type=PKCS12
+        server.ssl.key-store=classpath:Cert.p12
+        server.ssl.key-store-password=TOCOMPLETE
+        security.require-ssl=true
+ 
+ 4. S'assurer que l'accès au site est bien en HTTPS
+
+**Informations complémentaires :**  
+Attention, le certificat SSL délivré par Let's Encrypt est d'une durée de 3 mois.
+
+Pour renouveler le certificat SSL déja existant, voici la commande a utiliser :
+`sudo certbot renew --dry-run`  
+*Lien utile : https://certbot.eff.org/lets-encrypt/ubuntubionic-other* 
+
+### Objectifs :
+- API (*DONE*)
+- BDD (*DONE*)
+- HTTPS (*DONE*)
+- RGPD (**TO DO**)
+- Cryptage BDD (**TO DO**)
+- Site Web (**TO DO**)
+
+  -------------------------
+ -------------------------
+ # Architecture Artiphonie  
+ 
+ ![Diagramme architecture Artiphonie](./Rapport_Technique_Images/Diagramme_architecture_Artiphonie.PNG)  
+ 
+ -------------------------
+ -------------------------
  # RGPD 
 
 La RGPD ne s’applique pas si l’application mobile enregistre et conserve les données personnelles exclusivement localement, comme dans la première version de l’application.
