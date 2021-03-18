@@ -3,7 +3,12 @@
 2. [Creating a new sub app](#Steps-to-create-a-new-sub-app)
 3. [Creating a new game](#Steps-to-create-a-new-game)
 4. [Application architecture in godot](#Application-architecture)
-5. [RGPD](#RGPD)
+5. [Preuve de concept](#Preuve-de-concept)
+6. [Architecture Artiphonie](#Architecture-Artiphonie)
+7. [Diagramme BDD Artiphonie](#Diagramme-BDD-Artiphonie)
+8. [Spécification API Artiphonie Back-end](#Spécification-API-Artiphonie-Back-end)
+9. [Serveur Artiphonie](#Serveur-Artiphonie)
+10. [RGPD](#RGPD)
 
 -----------------------
 -----------------------
@@ -378,6 +383,244 @@ This file contains the globals variable and functions which can be used everywhe
 5. Lancer l'application Godot HTTPS recupérée auparavant sur le Git
 6. S'assurer que les requetes HTTPS vers le serveur sont bien sécurisées 
 
+-------------------------
+-------------------------
+ # Architecture Artiphonie  
+ 
+ ![Diagramme architecture Artiphonie](Rapport_Technique_Images/Diagramme%20architecture%20Artiphonie.PNG)
+ ![Diagramme architecture Artiphonie 2](Rapport_Technique_Images/Diagramme%20architecture%20Artiphonie%202.PNG)  
+ ![Diagramme architecture Artiphonie 3](Rapport_Technique_Images/Diagramme%20architecture%20Artiphonie%203.PNG)  
+ 
+ -------------------------
+-------------------------
+ # Diagramme BDD Artiphonie
+ 
+ ## Schéma
+  ![Schéma BDD Artiphonie](Rapport_Technique_Images/schéma%20BDD%20Artiphonie.PNG)
+  
+ ## Spécification
+ 
+**enfant** (Table principale) : Représente l’entité Enfant dans l’application Artiphonie.
+- *id (clé primaire)* : long , Identifiant de l’enfant
+- nom : text, Nom de l’enfant
+- prenom : text, Prénom de l’enfant
+- ethnicité : text, ethnicité de l’enfant ( pour de potentielle statitiques)
+- sexe : text, Sexe de l’enfant
+- age : int, Age de l’enfant
+- id_ortho : int, Identifiant de l’orthophoniste auquel l’enfant est rattaché
+- nb_etoile : int, Nombre d’étoile que l’enfant à gagner sur l’application grâce aux jeux
+- id_objet : int, Identifiant de l’objet que l’enfant a choisi
+- login : text, Login d’accès au compte de l’enfant
+- password : text, Mot de passe d’accès au compte de l’enfant  
+
+id_ortho (table enfant) = id (table orthophoniste)  
+id_objet (table enfant) = id (table objet)  
+
+
+**Objet** (Table principale) : Représente l’entité Objet que l’enfant peut choisir en jouant sur l’application Artiphonie
+- *id (clé primaire)* : long, Identifiant de l’objet
+- nom_avatar : text, Nom donné à l’objet
+- cout : int, Cout pour débloquer l’objet par l’enfant
+- type : int, Défini le type de l’objet ( pull, chapeau …)
+
+
+**orthophoniste** (Table principale) : Représente l’entité Orthophoniste dans l’application Artiphonie
+- *id (clé primaire)* : long, Identifiant de l’orthophoniste
+- nom : text, Nom de l’orthophoniste
+- prenom : text, Prénom de l’orthophoniste
+- login : text, Login de l’orthophoniste pour accéder à son compte
+- password : text, Mot de passe de l’orthophoniste pour accéder à son compte
+- email : text, Email pour contacter l’orthophoniste
+
+**succes** (Table association) : Représente l’ensemble des avatars que l’enfant à débloquer sur son compte  
+- *id_avatar, id_enfant (clé primaire)*  
+
+id_avatar (table succes) = id (table objet)  
+id_enfant (table succes) = id (table enfant)  
+
+
+**liste_mot** (Table principale) : Une liste de mot est une entité ayant son propre ID. Chaque liste de mots est liée à un enfant et est composée d’un ou plusieurs mots.
+- *id (clé primaire)* : long , Identifiant de la liste de mot.
+- id_enfant : int, Identifiant de l’enfant auquel la liste de mot est rattachée.
+- nb_mot : int, Le nombre de mots contenus dans la liste.
+- nom: text, Nom de la liste de mot
+- image: text, Nom de l’image de la liste de mot.
+- nb_tentative: int, Nombre de fois où l'enfant à travaillé sur la liste.  
+
+id_enfant (table liste_mot) = id (table enfant)  
+
+
+**mot_liste** (Table association) : Permet de retrouver les différents mots contenus dans une liste en particulier.
+- *id_liste_mot, mot (clé primaire)*
+
+id_liste_mot (table mot_liste) = id (table liste_mot)  
+mot (table mot_liste) = mot (table mot)  
+
+
+**mot** (Table principale) : Représente un mot utilisé pour l’apprentissage des enfants.
+- *id ( clé primaire)*: long, Représente mot en lui-même. 
+- ortho: text, Orthographe du mot
+- phon : text, Phonetique du mot
+- cgram: String, catégorie grammaticale
+- freqfilms2: int,  frequence apparition mot dans échantillon
+- bphons,text,
+- p_cvcv, structure grammaticale phonétique
+- nbsyll: int, Nombre de syllabe
+- image: String, Nom de l’image lié au mot
+
+id_son (table mot) = id (table son)  
+
+
+**statistique_mot** (Table association) : statistique_mot permet d’obtenir des informations concernant un mot pour un enfant en particulier afin de connaître les difficultés/points forts de ce dernier. Une statistique de mot pour un enfant est définie par une date pour permettre un suivi de la progression de l’enfant dans le temps. En effet, il sera possible de comparer les performances d’un enfant pour un mot donné un jour X avec celles de ce même enfant un jour Y. Voir même comparer différents enfants entre eux.
+- *id_enfant, mot ( clé primaire)*
+- *date ( clé primaire )* : date, Date à laquelle les statistiques ont été calculées.
+- nb_tentative : int, Nombre de tentative d’un enfant pour un mot sur une période donnée
+- nb_erreur : int, Nombre d'erreurs d’un enfant pour un mot sur une période donnée.
+- commentaire : text, Bref discriptif de l’analyse.
+
+id_enfant (table statistique_mot) = id (table enfant)  
+mot (table statistique_mot) = mot (table mot)  
+
+**image** (Table principale) : Représente l’ensemble des images enregistrées liées au mots sur l’application Artiphonie
+- *id (clé primaire)* : long, Identifiant de l’image
+- nom : text, Nom de l’image
+- image: bytearray, L’image sous forme de tableau de d’octets
+- type : text, Type d’image comme par exemple une image illustrative, d’aide à la prononciation ...
+- description : text, Bref descriptif de l’image
+
+ -------------------------
+ -------------------------
+ 
+ # Spécification API Artiphonie Back-end
+ 
+*Ceci est une première ébauche de la spécification de l’API hébergée sur un serveur à distance. Elle sera forcément amenée à être complétée par la suite selon l’évolution du projet pour s’adapter au maximum aux divers besoins de l’application.*
+
+**Version 1 : 05/03/2021**
+Version 2 : XX/XX/XXXX
+
+**Objet:**  
+
+	public ResponseEntity<Objet> getObjetByID(Long objetID){
+
+	public Map<String, Boolean> deleteObjet ( Long objetID ) {
+
+	public List<Objet> getAllObjet(){
+
+	public Avatar createObjet(Objet objet) {
+
+	public ResponseEntity<Objet> updateObjet(Long ObjetId, Objet objetdetails){
+
+	public ResponseEntity<Objet> getObjetByName(String objetName){
+
+**Enfant :**
+
+	public ResponseEntity<Enfant> getEnfantByID(Long enfantID){
+
+	public Map<String, Boolean> deleteEnfant ( Long enfantID ) {
+
+	public List<Enfant> getAllEnfant(){
+
+	public Enfant createEnfant( Enfant enfant) {
+
+	public ResponseEntity<Enfant> updateEnfant (Long EnfantID, Enfant enfantdetails)
+
+	//Retourne l’enfant si la connection est validée null sinon
+	public ResponseEntity<Enfant> getEnfantConnection(String login,String password){
+
+	public Enfant getEnfantByName( String name){
+
+	//Récupère la liste des objets que l’enfant a débloqué.
+	
+	public List<Objet> getMotByListe_MotName( String enfantLogin){
+
+	public Enfant getEnfantByLogin( String login){
+
+	//Recupère l’orthophoniste de l’enfant
+	public Orthophoniste getEnfantOrtho(@PathVariable(value = "id") Long enfantID){
+
+	//Récupère le liste des Liste_mot liées à l’enfant
+	public List <Liste_mot> getListe_motByEnfantName(String login){
+
+	//Ajoute un objet à la liste des objets débloqués
+	public ResponseEntity<Enfant> addObjetEnfant( Enfant enfant, String login) {
+
+**Orthophoniste :**
+
+	public ResponseEntity<Orthophoniste> getOrthophonisteByID(Long orthophonisteID){
+
+	public Map<String, Boolean> deleteOrthophoniste ( Long orthophonisteID ) {
+
+	public List<Orthophoniste> getAllOrthophoniste(){
+
+	public Orthophoniste createOrthophoniste( Orthophoniste orthophoniste) {
+
+	public ResponseEntity<Orthophoniste> updateOrthophoniste (Long orthophonisteID, Orthophoniste orthophonistedetails)
+
+	public ResponseEntity<Orthophoniste> getOrthophonisteConnection( String login, String password){
+
+	//Retourne la liste des enfants d’un orthophoniste en prenant le nom en argument
+	public List <Enfant> getEnfantsByName( String name){
+
+	public Orthophoniste getOrthophonisteByLogin(String login){
+
+
+**Liste_mot :**
+
+	public ResponseEntity<Liste_mot> getListe_motID(Long ID){
+
+	public Map<String, Boolean> deleteListe_mot ( Long ID ) {
+
+	public List<Liste_mot> getAllListe_mot(){
+
+	public Liste_mot createListe_mot( Liste listemot) {
+
+	public ResponseEntity<Liste_mot> updateListe_mot (Long liste_motID, Liste_mot liste_motdetails)
+
+	// Récupérer les mots de la liste de mots 
+	public List<Mot> getMotByListe_MotName(String liste_motName){
+
+	public ResponseEntity<Liste_mot> getListe_motByName(String liste_motName){
+
+	//Retourne l’enfant lié à la Liste_mot
+	public Enfant FromList(String name){
+
+	//Ajoute un mot à la liste de mot
+	public ResponseEntity<Liste_mot> addMotList( Liste_mot liste_mot,  String liste_motName) {
+
+
+**Mot :**
+
+	public ResponseEntity<Mot> getMotByID(Long ID){
+
+	public Map<String, Boolean> deleteEnfant ( Long ID ) {
+
+	public List<Mot> getAllMot(){
+
+	public Mot createMot( Mot mot) {
+
+	public ResponseEntity<Mot> updateMot (Long MotID, Mot motdetails)
+
+	//Retourne les mots en fonction de  l’orthographe
+	public List <Mot> getMotByName(String motName){
+
+	//Retourne la phonetic en fonction de l’orthographe
+	public String getMotPhoneticByName(String motName){
+
+**Image :**
+
+	public ResponseEntity<Image> getImageByID(Long ID){
+
+	public Map<String, Boolean> deleteImage ( Long ID ) {
+
+	public List<Image> getAllImage(){
+
+	public ImagecreateImgae( Image image) {
+
+	public ResponseEntity<Image> updateImage (Long ImageID, Image imagedetails)
+	
+	//Renvoie l’image sous forme de byteArray en fonction de son nom
+	public byte[] getImageByName(String nom)  {
+
  -------------------------
  -------------------------
  
@@ -501,12 +744,6 @@ Pour renouveler le certificat SSL déja existant, voici la commande a utiliser :
 - Cryptage BDD (**TO DO**)
 - Site Web (**TO DO**)
 
-  -------------------------
- -------------------------
- # Architecture Artiphonie  
- 
- ![Diagramme architecture Artiphonie](./Rapport_Technique_Images/Diagramme_architecture_Artiphonie.PNG)  
- 
  -------------------------
  -------------------------
  # RGPD 
