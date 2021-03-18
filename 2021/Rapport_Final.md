@@ -200,9 +200,11 @@ n'est pas aussi représentatif car cette métrique fournit par Github prend en c
 ![Nombre de commit et de ligne de code (ajoutée/supprimée)](./Rapport_Final_Images/nb_commit.JPG)
 
 Voici les statistiques des lignes de codes du projet pour 2021.
+
 ![Nombre de ligne de code 2021](./Rapport_Final_Images/nb_ligne_code.png)
 
 Voici les statistiques des lignes de codes du projet pour 2020, pour pouvoir bien comparé.
+
 ![Nombre de ligne de code 2020](./Rapport_Final_Images/nb_ligne_code_2020.png)
 
 On peut voir du côté de l'application que le nombre de ligne de code à diminuer depuis l'année dernière, en passant de 2'968 lignes à 1'663 lignes. Cela
