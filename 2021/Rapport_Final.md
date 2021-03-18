@@ -97,7 +97,11 @@ Le travail en back-end du projet Artiphonie a commencé de zéro. Autrement dit,
 
 La première tâche principale a été de réfléchir sur l’architecture du projet pour comprendre les différents utilisateurs, leurs liaisons et interactions avec le projet. De même, la constitution du projet est un élément clé où nous retrouvons une partie front-end et une partie back-end. L’application en Godot et un futur site Web forment la partie front-end. Nous retrouvons en back-end, une API permettant une connexion avec une base de données, tout cela hébergé sur un serveur.
 
+![Architecture Artiphonie](Rapport_Final_Images/Diagramme%20architecture%20Artiphonie.PNG)
+
 La seconde tâche essentielle a été la réflexion sur le diagramme de la base de données. Cette dernière a beaucoup évolué tout au long de l'avancée du projet. Néanmoins, nous avons dû garder en tête que notre base de données pourra éventuellement être utilisée pour effectuer des statistiques plus tard. Une autre contrainte a été de la rendre la plus souple et maniable possible pour éviter d’être limité dans le développement ou de tout revoir.
+
+![Diagramme BDD](Rapport_Final_Images/schéma%20BDD%20Artiphonie.PNG)
 
 Ces deux missions nous ont été fondamentales, car aucun back-end n’avait été développé dans la saison 1 d’Artiphonie. 
 
@@ -225,3 +229,4 @@ Cette démarche étant particulièrement interessante, car savoir partager ses c
 * [ARASAAC](https://arasaac.org/)
 * Images Borel Maisonny dessinées par Estelle Gillet-Perret
 * Vidéo gestes Borel Maisonny réalisées par Estelle Gillet-Perret
+* Documentation [Let's Encrypt](https://letsencrypt.org/fr/)
