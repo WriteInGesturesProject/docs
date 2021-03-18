@@ -20,7 +20,7 @@ Les objectifs ont donc étaient redéfinis comme suit :
 
 # Technologies employées
 
-* Le moteur de jeu [godot Engine](https://godotengine.org/)
+* Le moteur de jeu [Godot Engine](https://godotengine.org/)
 * Le langage de programmation [GDScript](https://docs.godotengine.org/fr/latest/getting_started/scripting/gdscript/gdscript_basics.html)
 * La gestion d’une base de donnée avec [PostgrerSQL](https://www.postgresql.org/)
 * Le développement d’une API en [Spring](https://docs.spring.io/spring-framework/docs/current/reference/html/languages.html)
@@ -32,7 +32,7 @@ Les objectifs ont donc étaient redéfinis comme suit :
 
 ## Front-End
 
-La nouvelle architecture de l’application reprend les éléments présents dans l’application originale, mais utilise les fonctionnalités de godot pour créer des templates qui permettent d’ajouter facilement de futures applications. Elle comprend également un nouveau menu qui permet d'accéder à toutes les sous-applications.
+La nouvelle architecture de l’application reprend les éléments présents dans l’application originale, mais utilise les fonctionnalités de Godot pour créer des templates qui permettent d’ajouter facilement de futures applications. Elle comprend également un nouveau menu qui permet d'accéder à toutes les sous-applications.
 
 L'image ci-dessous montre l'architecture de la page principale de l'application utilisant les templates :
 ![Architecture de la page principale de l'application](./Rapport_Final_Images/main_app_architecture.JPG)
@@ -55,7 +55,7 @@ Après réflexion autour des tables et des champs qui devrait être présent dan
 ## Front-End
 
 Sur la partie front end, nous avons tout d’abord pris connaissance du code existant. Pour tester l’application nous avons dû exporter l’application sous Android, cela à été compliqué, nous avons donc réalisé une documentation détaillant les étapes à suivre pour les années futures.
-L’application avait été réalisée par une équipe d'INFO 5 de l’année précédente, il y avait déjà une base importante, cependant le code était très statique et n’utilisait pas toujours les fonctionnalités fournies par le moteur godot, il n’était pas évident d'ajouter de nouvelle sous application de cette architecture.
+L’application avait été réalisée par une équipe d'INFO 5 de l’année précédente, il y avait déjà une base importante, cependant le code était très statique et n’utilisait pas toujours les fonctionnalités fournies par le moteur Godot, il n’était pas évident d'ajouter de nouvelle sous application de cette architecture.
 
 Après le premier rendez-vous avec madame Gillet-Perret et la revue de code, nous avons réalisé que pour créer une application servant de hub pour des futurs sous applications, il faudrait modifier fondamentalement la structure du code existant. Cela nous a amenées  à redéfinir les objectifs, le développement d’une nouvelle application était moins primordiale que de créer une base solide pour les années futures.
 
@@ -88,7 +88,7 @@ Nous avons également prévu un choix d’avatar de base comprenant un garçon e
 ### Pour la suite - front-end
 
 Les futures objectifs pour la partie front-end seraient :
-* Ajout de [tests unitaires](https://docs.godotengine.org/en/latest/development/cpp/unit_testing.html) dans godot 
+* Ajout de [tests unitaires](https://docs.godotengine.org/en/latest/development/cpp/unit_testing.html) dans Godot 
 * Développement de la nouvelle application
 
 ## Back-End
@@ -160,7 +160,7 @@ Une fois que la connexion entre la base de données et l'application mise en pla
 
 # Documentation
 
-Le projet étant voué à être repris par d'autres équipes d’INFO 5 dans les années futures, nous avons mis l'accent sur la documentation, qui manquait, pour leur permettre de reprendre le projet rapidement et facilement. Nous avons donc réalisé tout d’abord un tutoriel imagé qui explique comment [exporter l’application sous Android](../Technical/Android_Export.md). Nous en avons rédigé une documentation qui explique brièvement chaque [élément de l’architecture de l’application](../Technical/app_architecture_godot.md) dans godot. Une autre pour expliquer la démarche pour ajouter de nouveaux éléments : une [nouvelle sous application](../Technical/creating_a_new_sub_app.md) et un [nouveau jeu](../Technical/creating_a_new_game.md).
+Le projet étant voué à être repris par d'autres équipes d’INFO 5 dans les années futures, nous avons mis l'accent sur la documentation, qui manquait, pour leur permettre de reprendre le projet rapidement et facilement. Nous avons donc réalisé tout d’abord un tutoriel imagé qui explique comment [exporter l’application sous Android](../Technical/Android_Export.md). Nous en avons rédigé une documentation qui explique brièvement chaque [élément de l’architecture de l’application](../Technical/app_architecture_godot.md) dans Godot. Une autre pour expliquer la démarche pour ajouter de nouveaux éléments : une [nouvelle sous application](../Technical/creating_a_new_sub_app.md) et un [nouveau jeu](../Technical/creating_a_new_game.md).
 Nous avons également fait une étude sur la [RGPD](../RGPD.md) en lien avec l’application qui gère des données sensibles, car ce sont des données médicales relatives à des mineurs.  
 
 De plus, sachant que le back-end peut être difficile à comprendre sur les différents choix et l’architecture de ce dernier, nous avons tenu à le rendre le plus précis possible. Nous avons réalisé une documentation sur [l’architecture de la BDD](../Technical/Documentation_Architecture_BDD_ArtiphonieV1.pdf) dont un [schéma](../Technical/Diagramme_BDD.pdf) et une [spécification de l’API](../Technical/Spec_Api.md). Du côté serveur, une [présentation détaillée](https://github.com/WriteInGesturesProject/server/blob/master/README.md) du service est présentée en plus d’une explication des différentes étapes réalisées pour l’installation et la configuration des différentes parties comme la BDD PostgreSQL, l’API et le certificat SSL.
@@ -185,13 +185,30 @@ Celui-ci a beaucoup évolué en fonction de notre avancée et mais également du
 # Outils de collaboration
 
 Nous avons principalement utilisé l’outil de collaboration Github. Le projet contient 3 *repositories* : 
-* *dev* qui contient le code godot de l’application sur lequel les développeurs front end ont travaillé et les preuves de concepts réalisées
+* *dev* qui contient le code Godot de l’application sur lequel les développeurs front end ont travaillé et les preuves de concepts réalisées
 * *server* qui contient le code Spring de l’API de l’application sur lequel les développeurs back end on travaillé
 * *docs* qui contient les document du projet
 Nous avons utilisé l'outil de gestion de projet de Github qui permet de définir et d'attribuer des tâches ainsi que d’indiquer leurs états. 
 Nous avons également travaillé sur un drive partagé pour partager les comptes-rendus de réunions et rédiger les livrables.
 
 # Métriques logiciels
+
+Voici notre répartition en commit et ligne de code. La répartition affiché en pourcentage du nombre de total de commit, n'est pas forcémenent
+représentatif de la charge de travail car la taille d'un commit varie beaucoup. De plus on peut aussi voir que le nombre de ligne ajoutée/supprimée
+n'est pas aussi représentatif car cette métrique fournit par Github prend en compte des fichiers généré automatiquement. Par exemple, Morgan à environ 
+150'000 lignes ajouté mais dans ces lignes il y a un dictionnaire en format JSON de plus de 125'000 lignes.
+![Nombre de commit et de ligne de code (ajoutée/supprimée)](./Rapport_Final_Images/nb_commit.JPG)
+
+Voici les statistiques des lignes de codes du projet pour 2021.
+![Nombre de ligne de code 2021](./Rapport_Final_Images/nb_ligne_code.png)
+
+Voici les statistiques des lignes de codes du projet pour 2020, pour pouvoir bien comparé.
+![Nombre de ligne de code 2020](./Rapport_Final_Images/nb_ligne_code_2020.png)
+
+On peut voir du côté de l'application que le nombre de ligne de code à diminuer depuis l'année dernière, en passant de 2'968 lignes à 1'663 lignes. Cela
+reflète bien la restructuration complète du projet que nous avons fais cette année, en utilisant les fonctionnalitées de Godot permettant de créer des briques
+(appelé scene en Godot) qui sont réutilisable dans toute l'application. Nous pensons que cela à permis de rendre l'application plus facilement maintenable et
+accessible pour les futurs étudiants.
 
 # Conclusion
 
@@ -201,7 +218,7 @@ Parmi les différents projets sur lesquels nous avons eu l'occasion de travaille
 Cette démarche étant particulièrement interessante, car savoir partager ses connaissances lorsqu'on quitte un projet est une compétence qui nous sera très utile en entreprise.
 
 # Bibliographie
-* Documentation [godot](https://docs.godotengine.org/en/stable/)
+* Documentation [Godot](https://docs.godotengine.org/en/stable/)
 * [Lexique](http://www.lexique.org/)
 * [ARASAAC](https://arasaac.org/)
 * Images Borel Maisonny dessinées par Estelle Gillet-Perret
