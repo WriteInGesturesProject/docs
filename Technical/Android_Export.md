@@ -11,7 +11,7 @@ We will now make sure you have the right package for this project.
 
 Go to `file>Settings` then to the left go to `Appearance & Behavior>System Settings>Android SDK` then on the `SDK Patforms` tab click `Show Package Details` and make sure you have the same package as the image below. 
 
-![AndroidStudio Setup](Android_Export_Img/AndroidStudio2.jpg)
+![AndroidStudio Setup](Android_Export_Img/AndroidStudio1.jpg)
 
 If not select the package and click `ok`. You may be asked to accept the licence. Make sure to accept it or it may cause problems later. 
 
