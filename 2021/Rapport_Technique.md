@@ -495,7 +495,7 @@ mot (table statistique_mot) = mot (table mot)
  
 *Ceci est une première ébauche de la spécification de l’API hébergée sur un serveur à distance. Elle sera forcément amenée à être complétée par la suite selon l’évolution du projet pour s’adapter au maximum aux divers besoins de l’application.*
 
-**Version 1 : 05/03/2021**
+**Version 1 : 05/03/2021**  
 Version 2 : XX/XX/XXXX
 
 **Objet:**  
