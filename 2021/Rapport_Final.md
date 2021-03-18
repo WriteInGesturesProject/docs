@@ -101,6 +101,7 @@ La seconde tâche essentielle a été la réflexion sur le diagramme de la base 
 
 Ces deux missions nous ont été fondamentales, car aucun back-end n’avait été développé dans la saison 1 d’Artiphonie. 
 
+### 1er preuve de concept
 Dans un second temps, nous nous sommes lancés dans la mise en place de notre première preuve de concept. Celle-ci consiste à simuler une connexion entre une BDD et une application Godot par l’intermédiaire d’une API. 
 Nous avons dû faire un choix sur les technologies à utiliser pour parvenir à notre objectif. Après comparaison entre les technologies existantes, nous avons décidé de sélectionner celles qui nous semblent les plus répandues de nos jours et les plus performantes dans leur domaine. Nous avons choisi pour l’API et la BDD respectivement Spring et PostgreSQL.
 La preuve de concept s’est déroulée en plusieurs étapes :
@@ -111,26 +112,29 @@ La preuve de concept s’est déroulée en plusieurs étapes :
 * Lien entre Godot et API
 * Phase de test avec des requêtes HTTP par l’application Godot vers la BDD
 
-Information : Nous avons dans un premier temps décidé d’effectuer simplement des requêtes GET et POST en HTTP pour simplifier la mise en place de la preuve de concept et effectuer des tests en localhost.
+*Information : Nous avons dans un premier temps décidé d’effectuer simplement des requêtes GET et POST en HTTP pour simplifier la mise en place de la preuve de concept et effectuer des tests en localhost.*
 
+### Nos premiers pas dans le Back-end
 Après cela, l’équipe de back-end s’est lancée dans le développement de la vraie API, avec la mise en place d’une BDD hébergée sur un serveur à distance.
-
 Nous avons choisi comme hébergeur une VM Microsoft Azure à l’aide de nos crédits étudiants pour obtenir une adresse publique et un DNS spécifique pour le projet Artiphonie.
 
 Le serveur déployé tourne actuellement sur la version Ubuntu 18.04 (pour plus d’informations, nous vous invitons à consulter le dépôt git “server” du projet).
 
 La mise en place de la BDD PostgreSQL a été rapidement déployée par la suite à l’aide de la preuve de concept précédemment réalisée.
 
+#### API
 Du côté de l’API, une première ébauche de la spécification a été établie à partir du diagramme de la BDD et des besoins attendus par l’orthophoniste. A partir de cette dernière, nous avons implémenté les premières fonctions nécessaires à la communication avec la base de données répondant aux requêtes basiques attendues par l’application Godot. 
 
 Il a fallu ensuite implémenter la base de données réelle en fonction des indications et des besoins de l’application. Cette dernière a d'ailleurs beaucoup évolué tout au long du projet en fonction des nouvelles problématiques qui se posaient au fur et à mesure de notre avancement dans le projet.
 
 Nous avons évidemment par la suite continué à étoffer l’arsenal des fonctions de notre API. Cela tout en restant en contact très régulier avec l’équipe front-end pour savoir exactement quel type de requêtes serait utilisée par l'application pour communiquer avec la base de données.
 
+#### Evolution de la BDD
 L’équipe front-end nous a donné des scripts permettant de peupler la base de données en respectant l’architecture choisie pour celle-ci. Ces scripts se basent sur des bases de données open-sources de mots (Lexique383) et de pictogrammes (ARASAAC), et peuplent la base des mots et d’images de notre base de données.
 
 Ces scripts ont soulevé un problème avec l’architecture de notre base de données initiale où les mots et images avaient une relation 1-1 entre eux. Car lors de l’export si l’on cherche à associer à chaque mots une image (si elle existe), la base se retrouve peuplé d’un nombre important d’image (8’000 images) mais seulement 8’000 TODO
 
+### Sécurité 
 En parallèle, nous avons conscience que les données qui seront enregistrées traitent du domaine médical, donc certaines contraintes se sont ajoutées. Comme par exemple, nous retrouvons le respect de la RGPD du CHU de Grenoble, la mise en place d'outils de sécurité et de supervision du serveur pour limiter toutes attaques.
 Dans ce cas, nous nous sommes renseignés sur la RGPD du CHU de Grenoble et avons commencé à réfléchir pour renforcer l’accès à notre BDD par des requêtes non plus en HTTP mais HTTPS à l’aide d’un certificat SSL.
 
@@ -152,16 +156,16 @@ Les futures objectifs back-end pour la continuité du projet Artiphonie seraient
 Une fois que la connexion entre la base de données et l'application mise en place il faudrait :
 * Créer un compte utilisateur au premier démarrage
 * Mettre en place le calculs des statistiques sur les mots
-* Faire l'interface web des orthophonistes pour g"rer les stats et les listes de mots
+* Faire l'interface web des orthophonistes pour gérer les stats et les listes de mots
 
 # Documentation
 
 Le projet étant voué à être repris par d'autres équipes d’INFO 5 dans les années futures, nous avons mis l'accent sur la documentation, qui manquait, pour leur permettre de reprendre le projet rapidement et facilement. Nous avons donc réalisé tout d’abord un tutoriel imagé qui explique comment [exporter l’application sous Android](../Technical/Android_Export.md). Nous en avons rédigé une documentation qui explique brièvement chaque [élément de l’architecture de l’application](../Technical/app_architecture_godot.md) dans godot. Une autre pour expliquer la démarche pour ajouter de nouveaux éléments : une [nouvelle sous application](../Technical/creating_a_new_sub_app.md) et un [nouveau jeu(../Technical/creating_a_new_game.md)].
 Nous avons également fait une étude sur la [RGPD](../RGPD.md) en lien avec l’application qui gère des données sensibles, car ce sont des données médicales relatives à des mineurs.  
 
-De plus, sachant que le back-end peut être difficile à comprendre sur les différents choix et l’architecture de ce dernier, nous avons tenu à le rendre le plus précis possible. Nous avons réalisé une documentation sur [l’architecture de la BDD](../Technical/Diagramme_architecture_Artiphonie.pdf) et une [spécification de l’API](../Technical/Spec_Api.md). Du côté serveur, une présentation détaillée du service est présentée en plus d’une explication des différentes étapes réalisées pour l’installation et la configuration des différentes parties comme la BDD PostgreSQL, l’API et le certificat SSL.
+De plus, sachant que le back-end peut être difficile à comprendre sur les différents choix et l’architecture de ce dernier, nous avons tenu à le rendre le plus précis possible. Nous avons réalisé une documentation sur [l’architecture de la BDD](../Technical/Documentation_Architecture_BDD_ArtiphonieV1.pdf) dont un [schéma(../Technical/Diagramme_BDD.pdf)] et une [spécification de l’API](../Technical/Spec_Api.md). Du côté serveur, une [présentation détaillée](https://github.com/WriteInGesturesProject/server/blob/master/README.md) du service est présentée en plus d’une explication des différentes étapes réalisées pour l’installation et la configuration des différentes parties comme la BDD PostgreSQL, l’API et le certificat SSL.
 
-Enfin, une documentation sur les différentes preuves de concepts, qui ont été réalisées lors de ce projet, a été rédigée pour permettre une meilleure compréhension de ces dernières.
+Enfin, [une documentation](https://github.com/WriteInGesturesProject/dev/blob/master/Proof%20of%20concept/README.md) sur les différentes preuves de concepts, qui ont été réalisées lors de ce projet, a été rédigée pour permettre une meilleure compréhension de ces dernières.
 
 
 # Gestion de projet
